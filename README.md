@@ -15,8 +15,7 @@ flowchart TD
     C --> D("Import count matrix into R")
     D --> E("Perform differential gene expression analysis using DESeq2")
     E --> F("Visualize Ptgds and Cdkn2d expression")
-    F --> G("Interpret biological significance")
-    G --> H("End: Insights into spaceflight-induced gene expression")
+    F --> G("End: Insights into spaceflight-induced gene expression")
 
     style A fill:#C8E6C9
     style B fill:#C8E6C9
@@ -25,5 +24,4 @@ flowchart TD
     style E fill:#C8E6C9
     style F fill:#C8E6C9
     style G fill:#C8E6C9
-    style H fill:#C8E6C9
   ```
