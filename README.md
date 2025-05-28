@@ -13,7 +13,7 @@ flowchart TD
     A("Start: Download FASTQ data from NASA GeneLab") --> B("Run nf-core/rnaseq pipeline with Nextflow")
     B --> C("Generate gene count matrix and QC reports")
     C --> D("Import count matrix into R")
-    D --> E("Perform differential gene expression analysis")
+    D --> E("Perform differential gene expression analysis using DESeq2")
     E --> F("Visualize Ptgds and Cdkn2d expression")
     F --> G("Interpret biological significance")
     G --> H("End: Insights into spaceflight-induced gene expression")
