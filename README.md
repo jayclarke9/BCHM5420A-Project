@@ -1,4 +1,4 @@
-# 🚀🧠 ---- SpaceBrain ---- 🚀🧠
+# 🚀🧠 ---- SpaceBrain ---- 🧠🚀
 
 ## A Repository for Investigating Spaceflight-Induced Gene Expression Changes in the Rodent Brain
 
