@@ -28,6 +28,21 @@ R --version
   ```
   - Install R onto your machine: https://cran.r-project.org
   
-## Step 2: Download
+## Step 2: Download the quant.sf file
+Download the **F1.quant.sf** file that we'll be using for this demo. If you remember from my talk, the `quant.sf` files are the output files that Salmon produces. They quantify the gene expression for RNA-Seq data. In my study I used 8 quant.sf files, but for this demo we'll just use one!
+```r
+download.file(
+  "https://raw.githubusercontent.com/jayclarke9/BCHM5420A-Project/refs/heads/main/F1.quant.sf",
+  destfile = "F1.quant.sf"
+)
 
-    
+```
+If the file downloaded correctly, you will see something like this:
+
+`downloaded 175 KB`
+
+## Step 3: Read this quant.sf file in R
+```r
+quant <- read.table("F1.quant.sf", header = TRUE, sep = "\t", quote = "")
+head(quant)
+```
