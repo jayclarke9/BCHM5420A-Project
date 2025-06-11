@@ -32,7 +32,7 @@ R --version
 Download the **F1.quant.sf** file that we'll be using for this demo. If you remember from my talk, the `quant.sf` files are the output files that Salmon produces. They quantify the gene expression from RNA-Seq data. In my study I used 8 quant.sf files, but for this demo we'll keep it simple and just use one!
 ```r
 download.file(
-  "https://raw.githubusercontent.com/jayclarke9/BCHM5420A-Project/refs/heads/main/F1.quant.sf",
+  "https://raw.githubusercontent.com/jayclarke9/BCHM5420A-Project/refs/heads/main/Demo/F1.quant.sf",
   destfile = "F1.quant.sf"
 )
 
