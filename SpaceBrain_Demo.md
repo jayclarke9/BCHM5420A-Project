@@ -51,10 +51,6 @@ View the first few rows of the table
 head(quant)
 ```
 It should look like this:
-                  Name Length EffectiveLength TPM NumReads
-1 ENSMUST00000196221.2      9              10   0        0
-2 ENSMUST00000179664.2     11              12   0        0
-3 ENSMUST00000177564.2     16              17   0        0
-4 ENSMUST00000178537.2     12              13   0        0
-5 ENSMUST00000178862.2     14              15   0        0
-6 ENSMUST00000179520.2     11              12   0        0
+
+![table example](https://github.com/user-attachments/assets/286a1c21-a419-48e7-b137-a41cfccc4671)
+
