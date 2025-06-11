@@ -10,11 +10,11 @@ We will:
 
 ## Step 1: Install/Open R
 - If you're **sure** you have R installed, open RStudio or run this in your terminal to open R:
-```r
+```{r}
 R
 ```
 - If you're **unsure** if you have R installed, run this in your terminal to check. If you see something like R version 4.x.x, you’re good to go:
-```r
+```{r}
 R --version
 ```
 - If you **need to install R**, you have a few options:
