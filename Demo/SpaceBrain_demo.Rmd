@@ -48,7 +48,7 @@ Download the **F1.quant.sf** file that we'll be using for this demo. If you reme
 
 ``` r
 download.file(
-  "https://raw.githubusercontent.com/jayclarke9/BCHM5420A-Project/refs/heads/main/F1.quant.sf",
+  "https://raw.githubusercontent.com/jayclarke9/BCHM5420A-Project/refs/heads/main/Demo/F1.quant.sf",
   destfile = "F1.quant.sf"
 )
 ```
