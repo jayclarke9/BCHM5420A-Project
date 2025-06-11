@@ -60,7 +60,7 @@ As you can see from our table, the `Name` column doesn't have recognizable gene 
 
 At this point in my study, I used a `tx2gene` file to map these transcript IDs to gene names. But we probably don't have time for that! 
 
-Instead, let's just use the Ensembl IDs. A quick look at [Ensembl online](https://www.ensembl.org/Mus_musculus/Transcript/Summary?db=core;g=ENSMUSG00000015090;r=2:25356721-25359854;t=ENSMUST00000015234) tells us that the Ensembl ID for the `Ptgds` gene in mice is `ENSMUST00000015234`.
+Instead, let's just use the Ensembl IDs. A quick look at [Ensembl online](https://www.ensembl.org/Mus_musculus/Transcript/Summary?db=core;g=ENSMUSG00000015090;r=2:25356721-25359854;t=ENSMUST00000015234) tells us that the Ensembl ID for the *Ptgds* gene in mice is `ENSMUST00000015234`.
 
 Now let's find the **TPM value** for that gene ID. TPM stands for **Transcripts Per Million** and is the   abundance measure that we use for downstream analysis.
 
