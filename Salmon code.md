@@ -1,4 +1,4 @@
- # 🧬 RNA-Seq Quantification Pipeline Using Salmon
+# RNA-Seq Quantification Pipeline Using Salmon
 
 ## 1. Activate Environment and Install Salmon
 ```bash
