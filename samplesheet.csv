@@ -1,0 +1,9 @@
+sample,fastq_1,fastq_2,strandedness
+F1,/home/paperspace/BCHM5420_Project/Data/Data/GLDS-588_rna-seq_RR10_BRN_FLT_WT_F1_R1_raw.fastq.gz,/home/paperspace/BCHM5420_Project/Data/Data/GLDS-588_rna-seq_RR10_BRN_FLT_WT_F1_R2_raw.fastq.gz,reverse
+F3,/home/paperspace/BCHM5420_Project/Data/Data/GLDS-588_rna-seq_RR10_BRN_FLT_WT_F3_R1_raw.fastq.gz,/home/paperspace/BCHM5420_Project/Data/Data/GLDS-588_rna-seq_RR10_BRN_FLT_WT_F3_R2_raw.fastq.gz,reverse
+F5,/home/paperspace/BCHM5420_Project/Data/Data/GLDS-588_rna-seq_RR10_BRN_FLT_WT_F5_R1_raw.fastq.gz,/home/paperspace/BCHM5420_Project/Data/Data/GLDS-588_rna-seq_RR10_BRN_FLT_WT_F5_R2_raw.fastq.gz,reverse
+F7,/home/paperspace/BCHM5420_Project/Data/Data/GLDS-588_rna-seq_RR10_BRN_FLT_WT_F7_R1_raw.fastq.gz,/home/paperspace/BCHM5420_Project/Data/Data/GLDS-588_rna-seq_RR10_BRN_FLT_WT_F7_R2_raw.fastq.gz,reverse
+G1,/home/paperspace/BCHM5420_Project/Data/Data/GLDS-588_rna-seq_RR10_BRN_GC_WT_G1_R1_raw.fastq.gz,/home/paperspace/BCHM5420_Project/Data/Data/GLDS-588_rna-seq_RR10_BRN_GC_WT_G1_R2_raw.fastq.gz,reverse
+G3,/home/paperspace/BCHM5420_Project/Data/Data/GLDS-588_rna-seq_RR10_BRN_GC_WT_G3_R1_raw.fastq.gz,/home/paperspace/BCHM5420_Project/Data/Data/GLDS-588_rna-seq_RR10_BRN_GC_WT_G3_R2_raw.fastq.gz,reverse
+G5,/home/paperspace/BCHM5420_Project/Data/Data/GLDS-588_rna-seq_RR10_BRN_GC_WT_G5_R1_raw.fastq.gz,/home/paperspace/BCHM5420_Project/Data/Data/GLDS-588_rna-seq_RR10_BRN_GC_WT_G5_R2_raw.fastq.gz,reverse
+G7,/home/paperspace/BCHM5420_Project/Data/Data/GLDS-588_rna-seq_RR10_BRN_GC_WT_G7_R1_raw.fastq.gz,/home/paperspace/BCHM5420_Project/Data/Data/GLDS-588_rna-seq_RR10_BRN_GC_WT_G7_R2_raw.fastq.gz,reverse
