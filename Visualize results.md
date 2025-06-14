@@ -3,19 +3,21 @@
 # Barplot
 
 ## 1. In R, install the required libraries
-
+```
 install.packages("tidyr")
 library(tidyr)
 library(ggplot2)
 library(DESeq2)
-
+```
 ## 2. Set normalized counts
+```
 norm_counts <- counts(dds, normalized = TRUE)
 
 genes_of_interest <- c("Ptgds", "Cdkn2d")
 gene_ids <- rownames(res_df)[res_df$symbol %in% genes_of_interest]
-
+```
 ## 3. Creat data frame for plotting
+```
 subset_counts <- norm_counts[gene_ids, ]
 gene_symbols <- res_df[gene_ids, "symbol"]
 df <- data.frame(
@@ -24,13 +26,15 @@ df <- data.frame(
   condition = rep(samples$condition, times = length(gene_ids)),
   count = as.vector(subset_counts)
 )
-
+```
 # 4. Rename factor levels
+```
 df_long$condition <- factor(df_long$condition, 
                             levels = c("GC", "FLT"), 
                             labels = c("Ground Control", "Flight"))
-
+```
 # 5. Create and save plot as a JPEG
+```
 jpeg("gene_expression_barplot_final01.jpeg", width = 8, height = 6, units = "in", res = 300)
 
 ggplot(df_long, aes(x = condition, y = count, fill = condition)) +
@@ -48,9 +52,9 @@ ggplot(df_long, aes(x = condition, y = count, fill = condition)) +
   labs(x = NULL, y = "Normalized Counts")
 
 dev.off()
+```
 
-
-# Violin Plot showing all genes and their differential expression 
+# OPTIONAL: Volcano Plot showing all genes and their differential expression 
 
 
 
