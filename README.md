@@ -54,7 +54,7 @@ salmon quant -i transcripts_index \
 | Parameter | Default Value | Description | Requirement |
 |------------|---------|---------|--------------|
 | `--input`   | `samplesheet.csv`  | CSV with sample info and FASTQ paths | Required |
-| `--genome`  | None    | Reference ID from nf-core igenomes config (e.g. GRCm39 for mouse) | Required |
+| `--genome`  | None    | Reference ID from nf-core igenomes config (e.g. GRCm38 for mouse) | Required |
 | `--outdir` | `./results` | Output directory | Optional |
 
 ### Salmon
@@ -84,7 +84,7 @@ https://docs.conda.io/en/latest/miniconda.html
 ```
 nextflow run nf-core/rnaseq \
   --input samplesheet.csv \
-  --genome GRCm39 \
+  --genome GRCm38 \
   --outdir results/ \
   -profile conda
 ```
