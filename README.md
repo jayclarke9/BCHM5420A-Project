@@ -33,7 +33,7 @@ Ensure you have nextflow, conda (or docker), and nf-core/rnaseq installed.
 ```
 nextflow run nf-core/rnaseq \
   --input samplesheet.csv \
-  --genome GRCm39 \
+  --genome GRCm38 \
   --outdir results/ \
   -profile conda
 ```
