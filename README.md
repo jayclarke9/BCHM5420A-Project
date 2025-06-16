@@ -49,6 +49,23 @@ salmon quant -i transcripts_index \
 ```
 ## Parameters and Definitions
 
+### nf-core/rnaseq
+
+| Parameter | Default Value | Description | Requirement |
+|------------|---------|---------|--------------|
+| `--input'   | 'samplesheet.csv'  | CSV with sample info and FASTQ paths | Required |
+| `--genome'  | None    | Reference ID from nf-core igenomes config (e.g. GRCm39 for mouse) | Required |
+| `--outdir' | './results' | Output directory | Optional |
+
+### Salmon
+
+| Parameter | Default Value | Description | Requirement |
+|------------|---------|---------|--------------|
+| `-i'   | N/A  | Path to Salmon index directory | Required |
+| `-l'  | A    | Library type (usually 'A' for autodetect' | Optional |
+| `-1', '-2' | N/A | Paired-end FASTQ files | Required |
+| `-o' | 'quants/' | Output directory for quant results | Optional |
+
 ## Installation Instructions
 
 ## Outputs
