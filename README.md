@@ -49,7 +49,7 @@ salmon quant -i transcripts_index \
 ```
 ## Parameters and Definitions
 
-### nf-core/rnaseq
+### nf-core/rnaseq pipepline
 
 | Parameter | Default Value | Description | Requirement |
 |------------|---------|---------|--------------|
@@ -61,11 +61,55 @@ salmon quant -i transcripts_index \
 
 | Parameter | Default Value | Description | Requirement |
 |------------|---------|---------|--------------|
-| `-i'   | N/A  | Path to Salmon index directory | Required |
-| `-l'  | A    | Library type (usually 'A' for autodetect' | Optional |
+| `-i'   | N/A  | Path to Salmon transcriptome index | Required |
+| `-l'  | A    | Library type (usually 'A' for autodetect') | Optional |
 | `-1', '-2' | N/A | Paired-end FASTQ files | Required |
-| `-o' | 'quants/' | Output directory for quant results | Optional |
+| `-o' | 'quants/' | Output directory for quantification results | Optional |
+| 'p' | '1' | Number of threads to use during quantification | Optional |
 
 ## Installation Instructions
+
+### nf-core/rnaseq pipepline
+
+1. Install Nextflow:
+```
+curl -s https://get.nextflow.io | bash
+mv nextflow ~/bin/
+```
+
+2. Install Conda (for environments):
+https://docs.conda.io/en/latest/miniconda.html
+
+3. Launch pipeline:
+```
+nextflow run nf-core/rnaseq \
+  --input samplesheet.csv \
+  --genome GRCm39 \
+  --outdir results/ \
+  -profile conda
+```
+### Salmon
+
+1. Install Salmon:
+```
+conda install -c bioconda salmon
+```
+
+2. Download and index the reference transcriptome:
+
+You can download a mouse transcriptome FASTA file (e.g., from Ensembl or GENCODE), then build an index:
+```
+salmon index -t transcripts.fa -i transcripts_index
+```
+
+3. Run Salmon quantification:
+```
+salmon quant -i transcripts_index \
+  -l A \
+  -1 sample_1.fastq.gz \
+  -2 sample_2.fastq.gz \
+  -p 4 \
+  -o quants/sample_01
+```
 
 ## Outputs
