@@ -53,19 +53,19 @@ salmon quant -i transcripts_index \
 
 | Parameter | Default Value | Description | Requirement |
 |------------|---------|---------|--------------|
-| `--input'   | 'samplesheet.csv'  | CSV with sample info and FASTQ paths | Required |
-| `--genome'  | None    | Reference ID from nf-core igenomes config (e.g. GRCm39 for mouse) | Required |
-| `--outdir' | './results' | Output directory | Optional |
+| `--input`   | `samplesheet.csv`  | CSV with sample info and FASTQ paths | Required |
+| `--genome`  | None    | Reference ID from nf-core igenomes config (e.g. GRCm39 for mouse) | Required |
+| `--outdir` | `./results` | Output directory | Optional |
 
 ### Salmon
 
 | Parameter | Default Value | Description | Requirement |
 |------------|---------|---------|--------------|
-| `-i'   | N/A  | Path to Salmon transcriptome index | Required |
-| `-l'  | A    | Library type (usually 'A' for autodetect') | Optional |
-| `-1', '-2' | N/A | Paired-end FASTQ files | Required |
-| `-o' | 'quants/' | Output directory for quantification results | Optional |
-| 'p' | '1' | Number of threads to use during quantification | Optional |
+| `-i`   | N/A  | Path to Salmon transcriptome index | Required |
+| `-l`  | A    | Library type (usually 'A' for autodetect') | Optional |
+| `-1`, `-2` | N/A | Paired-end FASTQ files | Required |
+| `-o` | `quants/` | Output directory for quantification results | Optional |
+| `p` | `1` | Number of threads to use during quantification | Optional |
 
 ## Installation Instructions
 
@@ -113,3 +113,37 @@ salmon quant -i transcripts_index \
 ```
 
 ## Outputs
+
+### nf-core/rnaseq pipepline
+```
+results/
+├── multiqc/
+│   └── multiqc_report.html
+├── star/
+│   └── sample_01.bam
+├── salmon/
+│   └── quant.sf
+├── counts/
+│   └── gene_counts.tsv
+└── logs/
+    └── execution trace
+```
+| File | Description |
+|------------|---------|
+| `mutliqc_report.html` | Summary report of all QC tools |
+| `gene_counts.tsv` | Count matrix for downstream expression analysis |
+| `quant.sf` | Transcript-level quantification (TPM, read counts) |
+
+### Salmon
+```
+quants/
+├── sample_01/
+│   ├── quant.sf
+│   ├── cmd_info.json
+│   └── lib_format_counts.json
+```
+| File | Description |
+|------------|---------|
+| `quant.sf` | Main quantification file used with 'tximport' in R |
+| `lib_format_counts.json` | Count matrix for downstream expression analysis |
+| `quant.sf` | Transcript-level quantification (TPM, read counts) |
