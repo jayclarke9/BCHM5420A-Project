@@ -4,7 +4,9 @@
 
 This repository contains a bioinformatics pipeline and downstream analysis for investigating gene expression changes in the brain of rodents exposed to spaceflight. Specifically, the project focuses on the expression of Ptgds and Cdkn2d, two genes previously identified as significantly upregulated in spaceflight conditions. The analysis uses publicly available RNA-seq data from the NASA GeneLab database (Study OSD-612, GLDS-588).
 
-This project uses the nf-core/rnaseq Nextflow pipeline to: perform quality control and trimming of raw RNA-seq data, align reads and quantify gene expression, generate a count matrix for downstream analysis, and assess differential expression of Ptgds and Cdkn2d using DESeq2. An alternative method (Salmon) is presented in place of the rnaseq pipeline, for those who run into memory and time capacity issues on their machines.
+This project uses the nf-core/rnaseq Nextflow pipeline to: perform quality control and trimming of raw RNA-seq data, align reads and quantify gene expression, generate a count matrix for downstream analysis, and assess differential expression of Ptgds and Cdkn2d using DESeq2. 
+
+An alternative quantification method using Salmon is also provided for users with limited computational resources.
 
 ## Workflow:
 
@@ -26,11 +28,25 @@ flowchart TD
     style G fill:#C8E6C9
   ```
 ## Quick Start Guide
-### rnaseq Nextflow Pipeline
-
-### Alternative method: Salmon
-
-
+### Option 1: Run full rnaseq Nextflow Pipeline
+Ensure you have nextflow, conda (or docker), and nf-core/rnaseq installed.
+```
+nextflow run nf-core/rnaseq \
+  --input samplesheet.csv \
+  --genome GRCm39 \
+  --outdir results/ \
+  -profile conda
+```
+### Option 2: Lightweight Salmon quantification
+For systems with limited memory or time constraints:
+```
+salmon quant -i transcripts_index \
+  -l A \
+  -1 sample_1.fastq.gz \
+  -2 sample_2.fastq.gz \
+  -p 4 \
+  -o quants/sample_01
+```
 ## Parameters and Definitions
 
 ## Installation Instructions
