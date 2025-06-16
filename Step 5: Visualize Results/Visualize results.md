@@ -56,7 +56,38 @@ dev.off()
 
 # OPTIONAL: Volcano Plot showing all genes and their differential expression 
 
+Ensure res_df has the necessary columns
 
+If not already present, add gene symbols to the results data frame
+```
+res_df$gene <- res_df$symbol  # or modify as appropriate if symbols aren't yet present
+```
+Create a column for significance threshold
+```
+res_df$threshold <- with(res_df, padj < 0.05 & abs(log2FoldChange) > 1)
+```
 
+Volcano plot
+```
+jpeg("volcano_plot_unique.jpeg", width = 8, height = 6, units = "in", res = 300)
 
+ggplot(res_df, aes(x = log2FoldChange, y = -log10(padj))) +
+  geom_point(aes(color = threshold), alpha = 0.8, size = 1.5) +
+  scale_color_manual(values = c("black", "red")) +
+  theme_minimal(base_size = 14) +
+  geom_vline(xintercept = c(-1, 1), linetype = "dashed", color = "grey") +
+  geom_hline(yintercept = -log10(0.05), linetype = "dashed", color = "grey") +
+  labs(
+    title = "Volcano Plot",
+    x = "Log2 Fold Change",
+    y = "-Log10 Adjusted p-value",
+    color = "Significant"
+  ) +
+  theme(
+    legend.position = "top",
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank()
+  )
 
+dev.off()
+```
